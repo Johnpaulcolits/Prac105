@@ -1,0 +1,107 @@
+import java.util.*;
+public class Main {
+
+    
+    
+    
+    public static void main(String[] args) {
+    
+Scanner sc=new Scanner(System.in);        
+
+   int i=0;
+   
+   
+   while(i!=1){
+       
+       char r='o';
+       System.out.println("A. Multiplication");
+        System.out.println("B. Addition");
+         System.out.println("C. Subtraction");
+          System.out.println("D. Division");
+          System.out.println("E. Exit Program");
+           System.out.print("Please enter your choice :");
+           r=sc.next().charAt(0);
+           
+           
+           if(r=='a'||r=='A'){
+               float x,y,z;
+               
+              System.out.print("Please Enter Value :");
+              x=sc.nextInt();
+              System.out.print("Please Enter Value :");
+              y=sc.nextInt();
+              
+              z=mul(x,y);
+              
+              System.out.println("-----------------------------------------------");
+               System.out.println(x+" x "+y +" Is Equal To: "+z);
+              System.out.println("-----------------------------------------------");
+   }else if(r=='b'|| r=='B'){
+       float f,g,h;
+       
+       System.out.print("Please Enter Value : ");
+       f=sc.nextInt();
+       System.out.print("Please Enter Value : ");
+       g=sc.nextInt();
+       
+       h=add(f,g);
+       System.out.println("-----------------------------------------------------");
+      System.out.println(f+" x "+g+" Is Equal To : " +h);
+      System.out.println("-----------------------------------------------------");
+       
+   }else if(r=='c'|| r=='C'){
+       float l,m,n;
+       
+       System.out.print("Please Enter Value : ");
+       l=sc.nextInt();
+       System.out.print("Please Enter Value : ");
+       m=sc.nextInt();
+       
+       n=sub(l,m);
+       System.out.println("-----------------------------------------------------");
+      System.out.println(l+" x "+m+" Is Equal To : "+n);
+      System.out.println("-----------------------------------------------------");
+   }else if(r=='d'|| r=='D'){
+       float t,u,v;
+       
+       System.out.print("Please Enter Value : ");
+       t=sc.nextInt();
+       System.out.print("Please Enter Value : ");
+       u=sc.nextInt();
+       
+       v=div(t,u);
+       System.out.println("-----------------------------------------------------");
+      System.out.println(t+" x "+u+" Is Equal To : "+v);
+      System.out.println("-----------------------------------------------------");
+       
+   }else if(r=='e'|| r=='E'){
+       System.out.println("-----------------------------------------------------");
+       System.out.println("Thank you..!!");
+       System.out.println("-----------------------------------------------------");
+       i=1;
+   } else{
+       System.out.println("-----------------------------------------------------");
+       System.out.println("ERROR..!!");
+       System.out.println("Please input a right one..!!");
+       System.out.println("-----------------------------------------------------");
+      
+   }
+    
+   }
+     
+  
+        
+    }
+    public static float mul(float a,float b){
+        return a*b;
+    }
+    public static float add(float num1,float num2){
+        return num1+num2;
+    }
+    public static float sub(float num3,float num4){
+        return  num3-num4;
+    }
+    public static float div(float num5,float num6){
+        return num5/num6;
+    }
+}
